@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Locator - Supabase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-heart"></i> Family Locator</h1>
+            <p>Localização em tempo real com Supabase</p>
+        </header>
+
+        <!-- Status -->
+        <div class="status-card" id="statusCard">
+            <i class="fas fa-map-marker-alt status-icon" id="statusIcon"></i>
+            <div class="status-text">
+                <h3 id="statusTitle">Conectando...</h3>
+                <p id="statusMessage">Inicializando Supabase</p>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="button-group">
+            <button class="btn-primary" id="shareBtn">
+                <i class="fas fa-share"></i> Iniciar Compartilhamento
+            </button>
+            <button class="btn-secondary" id="stopBtn" style="display: none;">
+                <i class="fas fa-stop"></i> Parar Compartilhamento
+            </button>
+        </div>
+
+        <!-- Mapa -->
+        <div class="map-container" id="mapContainer" style="display: none;">
+            <div id="map" style="height: 400px;"></div>
+        </div>
+
+        <!-- Família Online -->
+        <div class="family-section" id="familySection" style="display: none;">
+            <h3><i class="fas fa-users"></i> Família Online (<span id="onlineCount">0</span>)</h3>
+            <div id="familyList" class="family-list"></div>
+        </div>
+
+        <!-- QR Code -->
+        <div class="qr-section" id="qrSection" style="display: none;">
+            <h3>Compartilhe esta sala</h3>
+            <div id="qrCode"></div>
+            <input type="text" id="shareLink" readonly class="share-input">
+            <button class="btn-copy" id="copyBtn">📋 Copiar Link</button>
+        </div>
+    </div>
+
+    <!-- Supabase + Leaflet + QR -->
+    <script src="ht
+    tps://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
