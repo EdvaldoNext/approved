@@ -12,7 +12,7 @@ class FamilyLocator {
         this.watchId = null;
         this.isSharing = false;
         this.userId = crypto.randomUUID();
-        this.userName = localStorage.getItem('familyName') || prompt('👤 Digite seu Nome:') || 'Membro';
+        this.userName = localStorage.getItem('familyName') || prompt('👤 Seu nome na famíli:') || 'Membro';
         localStorage.setItem('familyName', this.userName);
 
         // Sala (mantém o mesmo link ao recarregar)
@@ -28,7 +28,7 @@ class FamilyLocator {
         await this.loadMap();
         await this.createRoom();
         this.listenToFamily();
-        this.updateStatus('🟢 Conectado!', 'Clique no botão abaixo', '#4ecdc4');
+        this.updateStatus('🟢 Conectado!', 'Clique em Iniciar Compartilhamento', '#4ecdc4');
         this.generateQR();
     }
 
