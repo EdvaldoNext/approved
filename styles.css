@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background:black;
     min-height: 100vh;
     padding: 20px;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    background: rgb(110, 202, 4);
     color: white;
     text-align: center;
     padding: 35px 25px;
